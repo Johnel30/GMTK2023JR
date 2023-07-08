@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Pow_3 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject pictureObject;
+    public float newTime;
+    public float delayTime;
+    
+    public Timer_Fight_Screen timerFightScreen;
+
+    public IEnumerator DisplayPictureCoroutine()
     {
         
-    }
+            pictureObject.SetActive(true); // Show the picture
 
-    // Update is called once per frame
-    void Update()
-    {
+            yield return new WaitForSeconds(delayTime);
+
+            pictureObject.SetActive(false); // Hide the picture
+            timerFightScreen.currentTime = newTime;
         
     }
 }
