@@ -7,18 +7,29 @@ public class Pow_3 : MonoBehaviour
     public GameObject pictureObject;
     public float newTime;
     public float delayTime;
-    
+
+    public bool canClick;
     public Timer_Fight_Screen timerFightScreen;
+    public Button_Press button_pressed;
 
     public IEnumerator DisplayPictureCoroutine()
     {
-        
-            pictureObject.SetActive(true); // Show the picture
+        pictureObject.SetActive(true); // Show the picture
+        canClick = true;
+        while (delayTime > 0)
+        {
+            delayTime -= Time.deltaTime;
 
-            yield return new WaitForSeconds(delayTime);
+            if (button_pressed.canContinue)
+            {
+                delayTime = 0f;
+            }
 
-            pictureObject.SetActive(false); // Hide the picture
-            timerFightScreen.currentTime = newTime;
-        
+            yield return null; // Yield control back to Unity
+        }
+
+        pictureObject.SetActive(false); // Hide the picture
+        canClick = false;
+        timerFightScreen.currentTime = newTime;
     }
 }

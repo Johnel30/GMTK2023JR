@@ -11,7 +11,7 @@ public class Timer_Fight_Screen : MonoBehaviour
     public float currentTime;
     public float count;
 
-    
+
 
     private void Start()
     {
@@ -26,12 +26,12 @@ public class Timer_Fight_Screen : MonoBehaviour
             currentTime -= Time.deltaTime;
 
             // You can perform actions or update UI based on the current time here
-            Debug.Log("Time: " + currentTime.ToString("F2")); // Example: Display time in console
+            //Debug.Log("Time: " + currentTime.ToString("F2")); // Example: Display time in console
 
             if (currentTime <= 0)
             {
                 // Timer has reached zero, perform any necessary actions
-                Debug.Log("Time's up!");
+                //Debug.Log("Time's up!");
                 //Here is where the magic happens
                 StartCoroutine(Pow_2.DisplayPictureCoroutine());
                 count+= 1; //So that Pow_3 can activate after this one
@@ -43,19 +43,19 @@ public class Timer_Fight_Screen : MonoBehaviour
                 currentTime -= Time.deltaTime;
 
                 // You can perform actions or update UI based on the current time here
-                Debug.Log("Time: " + currentTime.ToString("F2")); // Example: Display time in console
+                //Debug.Log("Time: " + currentTime.ToString("F2")); // Example: Display time in console
 
                 if (currentTime <= 0)
                 {
                     // Timer has reached zero, perform any necessary actions
-                    Debug.Log("Time's up!");
+                    //Debug.Log("Time's up!");
                     //Here is where the magic happens
                     StartCoroutine(Pow_3.DisplayPictureCoroutine());
                     count+= 1; //So that Pow_3 can activate after this one
                 }
             }
         else {
-            Debug.Log("Finished");
+            //Debug.Log("Finished");
         }
     }
 }
