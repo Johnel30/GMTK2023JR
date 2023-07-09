@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1d8d590c650143e4ba128c7cb3a40535
+  - enabled: 1
+    path: Assets/Scenes/GMTK23_Fighting_Prototype_1.unity
+    guid: 943e284623a995544ad9500ac7767270
   m_configObjects: {}
